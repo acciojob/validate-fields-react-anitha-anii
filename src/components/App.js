@@ -19,7 +19,6 @@ const App = () => {
   function handleLogin() {
     if (text.Username === "" || text.Password === "") {
       setError("Both username and password are required.");
-      
     } else {
       setError("");
     }
@@ -41,14 +40,15 @@ const App = () => {
         name="Password"
         value={text.Password}
         onChange={handleChange}
-      />
-      <p id="errorMessage">{error}</p>
+      /><br />
+      {error && <div id="errorMessage">{error}</div>}
       <button onClick={handleLogin}>Login</button>
     </div>
   );
 };
 
 export default App;
+
 
 
 
