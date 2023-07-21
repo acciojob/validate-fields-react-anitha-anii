@@ -18,7 +18,8 @@ const App = () => {
 
   function handleLogin() {
     if (text.Username === "" || text.Password === "") {
-      setError("Both username and password are required");
+      setError("Both username and password are required.");
+      
     } else {
       setError("");
     }
